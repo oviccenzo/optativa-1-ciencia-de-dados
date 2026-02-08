@@ -1,0 +1,383 @@
+Lista 01
+
+Utilize o dataset Breast Cancer (link) e realize todo o pipeline de Ciência de Dados para este dataset.
+
+Compare diferentes modelos de classificação (Regressão Logística, KNN, Árvores de decisão, Random Forest).
+
+Verifique qual o melhor modelo utilizando as métricas de validação (acurácia, f1-score, recall, etc).
+
+Skip to main content
+scikit-learn homepage
+
+    Install
+    User Guide
+    API
+    Examples
+    Community
+
+    GitHub
+
+Section Navigation
+
+    sklearn
+
+sklearn.base
+
+sklearn.calibration
+
+sklearn.cluster
+
+sklearn.compose
+
+sklearn.covariance
+
+sklearn.cross_decomposition
+
+sklearn.datasets
+
+    clear_data_home
+    dump_svmlight_file
+    fetch_20newsgroups
+    fetch_20newsgroups_vectorized
+    fetch_california_housing
+    fetch_covtype
+    fetch_file
+    fetch_kddcup99
+    fetch_lfw_pairs
+    fetch_lfw_people
+    fetch_olivetti_faces
+    fetch_openml
+    fetch_rcv1
+    fetch_species_distributions
+    get_data_home
+    load_breast_cancer
+    load_diabetes
+    load_digits
+    load_files
+    load_iris
+    load_linnerud
+    load_sample_image
+    load_sample_images
+    load_svmlight_file
+    load_svmlight_files
+    load_wine
+    make_biclusters
+    make_blobs
+    make_checkerboard
+    make_circles
+    make_classification
+    make_friedman1
+    make_friedman2
+    make_friedman3
+    make_gaussian_quantiles
+    make_hastie_10_2
+    make_low_rank_matrix
+    make_moons
+    make_multilabel_classification
+    make_regression
+    make_s_curve
+    make_sparse_coded_signal
+    make_sparse_spd_matrix
+    make_sparse_uncorrelated
+    make_spd_matrix
+    make_swiss_roll
+
+sklearn.decomposition
+
+sklearn.discriminant_analysis
+
+sklearn.dummy
+
+sklearn.ensemble
+
+sklearn.exceptions
+
+sklearn.experimental
+
+sklearn.feature_extraction
+
+sklearn.feature_selection
+
+sklearn.frozen
+
+sklearn.gaussian_process
+
+sklearn.impute
+
+sklearn.inspection
+
+sklearn.isotonic
+
+sklearn.kernel_approximation
+
+sklearn.kernel_ridge
+
+sklearn.linear_model
+
+sklearn.manifold
+
+sklearn.metrics
+
+sklearn.mixture
+
+sklearn.model_selection
+
+sklearn.multiclass
+
+sklearn.multioutput
+
+sklearn.naive_bayes
+
+sklearn.neighbors
+
+sklearn.neural_network
+
+sklearn.pipeline
+
+sklearn.preprocessing
+
+sklearn.random_projection
+
+sklearn.semi_supervised
+
+sklearn.svm
+
+sklearn.tree
+
+sklearn.utils
+
+    API Reference
+    sklearn.datasets
+    load_breast_cancer
+
+load_breast_cancer
+sklearn.datasets.load_breast_cancer(*, return_X_y=False, as_frame=False)
+[source]
+
+Load and return the breast cancer Wisconsin dataset (classification).
+
+The breast cancer dataset is a classic and very easy binary classification dataset.
+
+Classes
+	
+
+2
+
+Samples per class
+	
+
+212(M),357(B)
+
+Samples total
+	
+
+569
+
+Dimensionality
+	
+
+30
+
+Features
+	
+
+real, positive
+
+The copy of UCI ML Breast Cancer Wisconsin (Diagnostic) dataset is downloaded from: https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic
+
+Read more in the User Guide.
+
+Parameters:
+
+    return_X_ybool, default=False
+
+        If True, returns (data, target) instead of a Bunch object. See below for more information about the data and target object.
+
+        Added in version 0.18.
+    as_framebool, default=False
+
+        If True, the data is a pandas DataFrame including columns with appropriate dtypes (numeric). The target is a pandas DataFrame or Series depending on the number of target columns. If return_X_y is True, then (data, target) will be pandas DataFrames or Series as described below.
+
+        Added in version 0.23.
+
+Returns:
+
+    dataBunch
+
+        Dictionary-like object, with the following attributes.
+
+        data{ndarray, dataframe} of shape (569, 30)
+
+            The data matrix. If as_frame=True, data will be a pandas DataFrame.
+        target{ndarray, Series} of shape (569,)
+
+            The classification target. If as_frame=True, target will be a pandas Series.
+        feature_namesndarray of shape (30,)
+
+            The names of the dataset columns.
+        target_namesndarray of shape (2,)
+
+            The names of target classes.
+        frameDataFrame of shape (569, 31)
+
+            Only present when as_frame=True. DataFrame with data and target.
+
+            Added in version 0.23.
+        DESCRstr
+
+            The full description of the dataset.
+        filenamestr
+
+            The path to the location of the data.
+
+            Added in version 0.20.
+
+    (data, target)tuple if return_X_y is True
+
+        A tuple of two ndarrays by default. The first contains a 2D ndarray of shape (569, 30) with each row representing one sample and each column representing the features. The second ndarray of shape (569,) contains the target samples. If as_frame=True, both arrays are pandas objects, i.e. X a dataframe and y a series.
+
+        Added in version 0.18.
+
+Examples
+
+Let’s say you are interested in the samples 10, 50, and 85, and want to know their class name.
+
+from sklearn.datasets import load_breast_cancer
+
+data = load_breast_cancer()
+
+data.target[[10, 50, 85]]
+array([0, 1, 0])
+
+list(data.target_names)
+[np.str_('malignant'), np.str_('benign')]
+
+Gallery examples
+
+Model-based and sequential feature selection
+
+Permutation Importance with Multicollinear or Correlated Features
+
+Effect of varying threshold for self-training
+
+Post pruning decision trees with cost complexity pruning
+
+previous
+
+get_data_home
+
+next
+
+load_diabetes
+On this page
+
+    load_breast_cancer
+    Gallery examples
+
+This Page
+
+    Show Source
+
+© Copyright 2007 - 2025, scikit-learn developers (BSD License).
+lista 2 🎯 Objetivo
+
+Prever se a renda de uma pessoa é superior a 50 mil dólares por ano (income = >50K) com base em dados demográficos e socioeconômicos.
+📁 Dataset
+
+URL: https://raw.githubusercontent.com/pycaret/datasets/refs/heads/main/data/common/income.csv
+🔧 Etapas da Atividade
+1. Carregamento e exploração inicial dos dados
+2. Limpeza e pré-processamento
+3. Análise exploratória (EDA)
+
+    Faça gráficos que ajudem a entender a relação entre income e variáveis como:
+
+        education, occupation, sex, hours-per-week, capital-gain.
+
+    Calcule e visualize a taxa de renda alta (>50K) por grupo usando groupby.
+
+4. Modelagem preditiva
+
+    Treine pelo menos dois modelos preditivos, como:
+
+        Regressão Logística
+
+        Random Forest
+
+        KNN
+
+        SVM
+
+    Compare os modelos utilizando métricas como acurácia, precisão, recall e F1-score.
+
+5. Avaliação
+
+    Gere a matriz de confusão.
+
+    Mostre gráficos de importância dos atributos.
+
+    Interprete os resultados: quais variáveis mais influenciam na renda?
+
+✅ Entregáveis
+
+    Link do Colab Notebook com todas as etapas descritas acima.
+    Gráficos e tabelas com insights obtidos.
+
+lista 3 
+🎯 Objetivo:
+
+Desenvolver modelos de redes neurais artificiais para resolver problemas de classificação utilizando os conjuntos de dados Wine e Breast Cancer. Os modelos devem ser otimizados utilizando Keras Tuner para ajuste de hiperparâmetros.
+📌 Tarefas:
+
+    Carregue e explore os datasets:
+
+        Wine e Breast Cancer disponíveis via sklearn.datasets.
+
+        Faça a divisão dos dados em treino e teste (80/20 ou similar).
+
+        Realize a padronização dos dados (StandardScaler ou equivalente).
+
+    Crie modelos de redes neurais artificiais:
+
+        Use o Keras para construir e treinar modelos para cada dataset.
+
+        Utilize Keras Tuner para ajustar os principais hiperparâmetros:
+
+            Número de camadas ocultas
+
+            Número de neurônios por camada
+
+            Função de ativação
+
+            Taxa de aprendizado (learning_rate)
+
+            Otimizador (adam, sgd, etc.)
+
+    Avalie os modelos:
+
+        Apresente o relatório de classificação (classification_report) com métricas como:
+
+            Precisão (precision)
+
+            Revocação (recall)
+
+            F1-score
+
+        Mostre os valores finais dos hiperparâmetros selecionados.
+
+        Descreva a arquitetura final do modelo (quantidade de camadas, ativação, etc.)
+
+📝 Entrega:
+
+    O trabalho deve ser entregue em um notebook Google Colab.
+
+    Envie apenas o link de compartilhamento do Colab (com acesso público ou para quem possui o link).
+
+    Prazo final: 16/06/2025
+
+    Nomeie o notebook como:
+    RA_Nome_Sobrenome_RedesNeurais_FineTuning.ipynb
+
+✅ Dica:
+
+Utilize exemplos práticos vistos em aula como base e adapte-os para cada dataset. Utilize gráficos de acurácia e perda por época para melhor visualização da performance dos modelos.
