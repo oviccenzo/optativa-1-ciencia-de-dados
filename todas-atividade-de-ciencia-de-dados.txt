@@ -161,7 +161,7 @@ The breast cancer dataset is a classic and very easy binary classification datas
 Classes
 	
 
-2
+lista 2
 
 Samples per class
 	
@@ -322,6 +322,7 @@ URL: https://raw.githubusercontent.com/pycaret/datasets/refs/heads/main/data/com
 
     Link do Colab Notebook com todas as etapas descritas acima.
     Gráficos e tabelas com insights obtidos.
+
 
 lista 3 
 🎯 Objetivo:
