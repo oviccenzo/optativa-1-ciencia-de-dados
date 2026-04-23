@@ -1,3 +1,4 @@
+#aula 6 ciencia de dados
 # Open In Colab
 import pandas as pd
 from sklearn.model_selection import train_test_split
