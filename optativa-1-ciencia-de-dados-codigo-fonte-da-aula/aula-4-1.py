@@ -10,8 +10,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Aquisição de dados
-df = pd.read_csv \
-    ('https://raw.githubusercontent.com/JohnEric-Creator/FreeDataScienceAcquisition/refs/heads/main/Titanic-Dataset.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/JohnEric-Creator/FreeDataScienceAcquisition/refs/heads/main/Titanic-Dataset.csv')
 
 
 # Data cleaning de NaN
